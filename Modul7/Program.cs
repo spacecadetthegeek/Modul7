@@ -1,19 +1,17 @@
 ﻿using System;
 
-class Food { }
+class Obj
+{
+    private string name;
+    private string owner;
+    private int length;
+    private int count;
 
-class Fruits : Food{ }
-
-class Vegetable : Food { }
-
-class Apple : Fruits { }
-
-class Banana : Fruits { }
-
-class Pear : Fruits { }
-
-
-class Potato : Vegetable { }
-
-class Carrot : Vegetable { }
-
+    public Obj(string name, string ownerName, int objLength, int count)
+    {
+        this.name = name;
+        owner = ownerName;
+        length = objLength;
+        this.count = count;
+    }
+}
