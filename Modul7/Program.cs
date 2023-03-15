@@ -1,18 +1,19 @@
 ﻿using System;
 
-public class Employee
-{
-    public string Name;
-    public int Age;
-    public int Salary;
-}
+class Food { }
 
-public class ProjectManager : Employee
-{
-    public string ProjectName;
-}
+class Fruits : Food{ }
 
-public class Developer : Employee
-{
-    public string ProgrammingLanguage;
-}
+class Vegetable : Food { }
+
+class Apple : Fruits { }
+
+class Banana : Fruits { }
+
+class Pear : Fruits { }
+
+
+class Potato : Vegetable { }
+
+class Carrot : Vegetable { }
+
