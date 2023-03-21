@@ -89,18 +89,32 @@ class Clothing : Product
     }
 
 }
-
 public class Person
 {
-    public string FirstName;
-    public string LastName;
+    private static int count = 0;
+
+    public static int Count
+    {
+        get { return count; }
+    }
+
+    private string firstName;
+    private string lastName;
 
     public Person(string firstName, string lastName)
     {
-        FirstName = firstName;
-        LastName = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        count++;
+    }
+
+    public static void PrintInfo()
+    {
+        Console.WriteLine("Total number of Person instances created: " + count);
     }
 }
+
+
 
 
 class Order<TDelivery,
@@ -117,8 +131,9 @@ TStruct> where TDelivery : Delivery
         Console.WriteLine(Delivery.Address);
     }
 
-    
-    Person person = new Person("Иван", "Иванов");
+    Person p1 = new Person("John", "Doe");
+    Person p2 = new Person("Jane", "Doe");
+   
 
 }
 
